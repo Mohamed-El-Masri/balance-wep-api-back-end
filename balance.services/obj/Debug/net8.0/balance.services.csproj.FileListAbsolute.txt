@@ -1,0 +1,17 @@
+C:\Users\HP\Desktop\MVC\balance\balance.services\bin\Debug\net8.0\balance.services.deps.json
+C:\Users\HP\Desktop\MVC\balance\balance.services\bin\Debug\net8.0\balance.services.dll
+C:\Users\HP\Desktop\MVC\balance\balance.services\bin\Debug\net8.0\balance.services.pdb
+C:\Users\HP\Desktop\MVC\balance\balance.services\bin\Debug\net8.0\balance.domain.dll
+C:\Users\HP\Desktop\MVC\balance\balance.services\bin\Debug\net8.0\balance.Repositories.dll
+C:\Users\HP\Desktop\MVC\balance\balance.services\bin\Debug\net8.0\balance.domain.pdb
+C:\Users\HP\Desktop\MVC\balance\balance.services\bin\Debug\net8.0\balance.Repositories.pdb
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\balance.services.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\balance.services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\balance.services.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\balance.services.AssemblyInfo.cs
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\balance.services.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\balance..593C21B1.Up2Date
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\balance.services.dll
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\refint\balance.services.dll
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\balance.services.pdb
+C:\Users\HP\Desktop\MVC\balance\balance.services\obj\Debug\net8.0\ref\balance.services.dll

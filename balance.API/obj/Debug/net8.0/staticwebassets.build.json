@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "JZ9qKFV18/b6Kc6sAnIJ5z+X2xjNmwQ0eeByKp2NVas=",
+  "Source": "balance.API",
+  "BasePath": "_content/balance.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
