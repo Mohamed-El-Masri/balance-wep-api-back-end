@@ -1,7 +1,10 @@
-using balance.domain;
+﻿using balance.domain;
 using balance.services.DTOs.Authentication;
 using balance.services.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace balance.services.Services
 {
@@ -46,6 +49,7 @@ namespace balance.services.Services
                 PhoneNumber = registerDto.PhoneNumber,
                 Address = registerDto.Address,
                 CreatedAt = DateTime.Now
+                
             };
 
             var result = await _userManager.CreateAsync(user, registerDto.Password);
@@ -60,18 +64,10 @@ namespace balance.services.Services
                 };
             }
 
-            // Ensure roles exist
-            if (!await _roleManager.RoleExistsAsync("Admin"))
-                await _roleManager.CreateAsync(new IdentityRole("Admin"));
-                
-            if (!await _roleManager.RoleExistsAsync("Agent"))
-                await _roleManager.CreateAsync(new IdentityRole("Agent"));
-                
-            if (!await _roleManager.RoleExistsAsync("Customer"))
-                await _roleManager.CreateAsync(new IdentityRole("Customer"));
+           
 
-            // Assign role
-            await _userManager.AddToRoleAsync(user, registerDto.Role);
+            // Assign role is customer 
+            await _userManager.AddToRoleAsync(user,"Customer");
 
             // Generate token
             var roles = await _userManager.GetRolesAsync(user);
@@ -189,14 +185,160 @@ namespace balance.services.Services
             return await _userManager.IsInRoleAsync(user, role);
         }
 
-        public async Task<bool> CreateRoleAsync(string roleName)
+        public async Task<List<string>> GetAllRoles()
         {
-            if (!await _roleManager.RoleExistsAsync(roleName))
-            {
-                var result = await _roleManager.CreateAsync(new IdentityRole(roleName));
-                return result.Succeeded;
-            }
-            return true;
+            var Roles= await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+            return Roles;
         }
+
+        public async Task<List<UserDto>> GetAllUsers()
+        {
+            var users = await _userManager.Users.ToListAsync();
+
+            var userDtos = new List<UserDto>();
+
+            foreach (var user in users)
+            {
+                var roles = await _userManager.GetRolesAsync(user); 
+
+                var userDto = new UserDto
+                {
+                    UserId = user.Id,
+                    CountOfRoles = roles.Count,    
+                    Email = user.Email,
+                    Username=user.UserName,
+                    PhoneNumber = user.PhoneNumber,
+                    Roles = roles.ToList()  
+
+                };
+
+                userDtos.Add(userDto);
+            }
+
+            return userDtos;
+        }
+
+        public async Task<AuthResponseDto> RemoveRoleFromUser(string userId, string roleName)
+        {
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(roleName))
+            {
+                return new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "User ID and Role Name cannot be null or empty"
+                };
+            }
+
+            // البحث عن المستخدم
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "User not found"
+                };
+            }
+
+            // التحقق من وجود الدور
+            var roleExists = await _roleManager.RoleExistsAsync(roleName);
+            if (!roleExists)
+            {
+                return new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "Role not found"
+                };
+            }
+
+            // التحقق من أن المستخدم لديه هذا الدور
+            var isInRole = await _userManager.IsInRoleAsync(user, roleName);
+            if (!isInRole)
+            {
+                return new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "User does not have this role"
+                };
+            }
+
+            // محاولة إزالة الدور
+            var result = await _userManager.RemoveFromRoleAsync(user, roleName);
+            if (result.Succeeded)
+            {
+                return new AuthResponseDto
+                {
+                    IsSuccess = true,
+                    Message = $"Role '{roleName}' removed successfully from user"
+                };
+            }
+
+            // في حالة وجود أخطاء
+            return new AuthResponseDto
+            {
+                IsSuccess = false,
+                Message = string.Join(", ", result.Errors.Select(e => e.Description))
+            };
+        }
+
+        public async Task<AuthResponseDto> RemoveUser(string userId)
+        {
+            if (string.IsNullOrEmpty(userId) )
+            {
+                return new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "User ID  cannot be null or empty"
+                };
+            }
+
+            // البحث عن المستخدم
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "User not found"
+                };
+            }
+
+
+            
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                return new AuthResponseDto
+                {
+                    IsSuccess = true,
+                    Message = $"user '{user.UserName}' removed successfully"
+                };
+            }
+
+            // في حالة وجود أخطاء
+            return new AuthResponseDto
+            {
+                IsSuccess = false,
+                Message = string.Join(", ", result.Errors.Select(e => e.Description))
+            };
+        }
+        public async Task<AuthResponseDto> LogOut()
+        {
+            return new AuthResponseDto
+            {
+                IsSuccess = true,
+                Message = "User logged out successfully"
+            };
+        }
+
+        //public async Task<bool> CreateRoleAsync(string roleName)
+        //{
+        //    if (!await _roleManager.RoleExistsAsync(roleName))
+        //    {
+        //        var result = await _roleManager.CreateAsync(new IdentityRole(roleName));
+        //        return result.Succeeded;
+        //    }
+        //    return true;
+        //}
     }
 }

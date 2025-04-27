@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.API\\balance.API.csproj": {}
+    "F:\\balance-wep-api-back-end\\balance.API\\balance.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.API\\balance.API.csproj": {
+    "F:\\balance-wep-api-back-end\\balance.API\\balance.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.API\\balance.API.csproj",
+        "projectUniqueName": "F:\\balance-wep-api-back-end\\balance.API\\balance.API.csproj",
         "projectName": "balance.API",
-        "projectPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.API\\balance.API.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.API\\obj\\",
+        "projectPath": "F:\\balance-wep-api-back-end\\balance.API\\balance.API.csproj",
+        "packagesPath": "C:\\Users\\Nada Mostafa\\.nuget\\packages\\",
+        "outputPath": "F:\\balance-wep-api-back-end\\balance.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nada Mostafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.services\\balance.services.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.services\\balance.services.csproj"
+              "F:\\balance-wep-api-back-end\\balance.services\\balance.services.csproj": {
+                "projectPath": "F:\\balance-wep-api-back-end\\balance.services\\balance.services.csproj"
               }
             }
           }
@@ -88,24 +88,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.domain\\balance.domain.csproj": {
+    "F:\\balance-wep-api-back-end\\balance.domain\\balance.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.domain\\balance.domain.csproj",
+        "projectUniqueName": "F:\\balance-wep-api-back-end\\balance.domain\\balance.domain.csproj",
         "projectName": "balance.domain",
-        "projectPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.domain\\balance.domain.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.domain\\obj\\",
+        "projectPath": "F:\\balance-wep-api-back-end\\balance.domain\\balance.domain.csproj",
+        "packagesPath": "C:\\Users\\Nada Mostafa\\.nuget\\packages\\",
+        "outputPath": "F:\\balance-wep-api-back-end\\balance.domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nada Mostafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -138,10 +138,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNet.Identity.EntityFramework": {
-              "target": "Package",
-              "version": "[2.2.4, )"
-            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.15, )"
@@ -187,24 +183,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.Repositories\\balance.Repositories.csproj": {
+    "F:\\balance-wep-api-back-end\\balance.Repositories\\balance.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.Repositories\\balance.Repositories.csproj",
+        "projectUniqueName": "F:\\balance-wep-api-back-end\\balance.Repositories\\balance.Repositories.csproj",
         "projectName": "balance.Repositories",
-        "projectPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.Repositories\\balance.Repositories.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.Repositories\\obj\\",
+        "projectPath": "F:\\balance-wep-api-back-end\\balance.Repositories\\balance.Repositories.csproj",
+        "packagesPath": "C:\\Users\\Nada Mostafa\\.nuget\\packages\\",
+        "outputPath": "F:\\balance-wep-api-back-end\\balance.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nada Mostafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -219,8 +215,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.domain\\balance.domain.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.domain\\balance.domain.csproj"
+              "F:\\balance-wep-api-back-end\\balance.domain\\balance.domain.csproj": {
+                "projectPath": "F:\\balance-wep-api-back-end\\balance.domain\\balance.domain.csproj"
               }
             }
           }
@@ -256,24 +252,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.services\\balance.services.csproj": {
+    "F:\\balance-wep-api-back-end\\balance.services\\balance.services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.services\\balance.services.csproj",
+        "projectUniqueName": "F:\\balance-wep-api-back-end\\balance.services\\balance.services.csproj",
         "projectName": "balance.services",
-        "projectPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.services\\balance.services.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.services\\obj\\",
+        "projectPath": "F:\\balance-wep-api-back-end\\balance.services\\balance.services.csproj",
+        "packagesPath": "C:\\Users\\Nada Mostafa\\.nuget\\packages\\",
+        "outputPath": "F:\\balance-wep-api-back-end\\balance.services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nada Mostafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -288,11 +284,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.domain\\balance.domain.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.domain\\balance.domain.csproj"
+              "F:\\balance-wep-api-back-end\\balance.domain\\balance.domain.csproj": {
+                "projectPath": "F:\\balance-wep-api-back-end\\balance.domain\\balance.domain.csproj"
               },
-              "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.Repositories\\balance.Repositories.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\MVC\\balance\\balance.Repositories\\balance.Repositories.csproj"
+              "F:\\balance-wep-api-back-end\\balance.Repositories\\balance.Repositories.csproj": {
+                "projectPath": "F:\\balance-wep-api-back-end\\balance.Repositories\\balance.Repositories.csproj"
               }
             }
           }
@@ -338,7 +334,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

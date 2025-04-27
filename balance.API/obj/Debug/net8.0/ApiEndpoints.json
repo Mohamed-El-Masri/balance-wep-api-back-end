@@ -22,16 +22,36 @@
   },
   {
     "ContainingType": "balance.API.Controllers.AuthController",
-    "Method": "CreateRole",
-    "RelativePath": "api/Auth/create-role",
-    "HttpMethod": "POST",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Auth/GetAllRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "balance.API.Controllers.AuthController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Auth/GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "balance.API.Controllers.AuthController",
+    "Method": "GetUserRoles",
+    "RelativePath": "api/Auth/GetUserRoles",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "roleName",
+        "Name": "userId",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -54,6 +74,16 @@
   },
   {
     "ContainingType": "balance.API.Controllers.AuthController",
+    "Method": "LogOut",
+    "RelativePath": "api/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "balance.API.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "api/Auth/register",
     "HttpMethod": "POST",
@@ -70,9 +100,30 @@
   },
   {
     "ContainingType": "balance.API.Controllers.AuthController",
-    "Method": "GetUserRoles",
-    "RelativePath": "api/Auth/roles",
-    "HttpMethod": "GET",
+    "Method": "RemoveRoleFromUser",
+    "RelativePath": "api/Auth/RemoveRoleFromUser",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "balance.API.Controllers.AuthController",
+    "Method": "RemoveUser",
+    "RelativePath": "api/Auth/RemoveUser",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
